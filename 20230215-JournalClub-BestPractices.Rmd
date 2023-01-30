@@ -1,0 +1,207 @@
+---
+title: "Journal Club: *Best Practices for Scientific Computing*"
+author: "Flic Anderson"
+date: "15/02/2023"
+output: 
+  ioslides_presentation: 
+    logo: images/logo.svg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('slide:not(.title-slide, .backdrop, .segue)').append('<footer label=\"BestPracticesSciComp"></footer>');    
+    })
+</script>
+
+<style>
+  footer:after {
+    content: attr(label);
+    font-size: 12pt;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    line-height: 1.9;
+  }
+</style>
+
+<style type="text/css">
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+</style>
+
+<div class="notes">
+
+Bio: 
+Currently a PhD Researcher at EPCC, School of Informatics, at the University of Edinburgh, project title: "Coding Smart in Academia: Evidence-Based Software Engineering Approaches for High-Quality Research Software Projects". 
+Flic Anderson has been a Research Assistant in Bioinformatics in the Wallace Lab (within the Institute for Cell Biology) at the University of Edinburgh. 
+Flic was part of the development team for the 'riboviz' open source software package for processing and analysis of ribosome profiling data, working with colleagues from EPCC (University of Edinburgh) to make the codebase more robust & sustainable.   
+With a background in Ecology and Botany (previously a Research Assistant at the Royal Botanic Garden Edinburgh), Flic has worked with a wide range of types of biological data using different software tools and programming languages (particularly R) for the last 8 years, and found herself drawn towards bioinformatics and research software engineering. 
+Flic is a member of the Edinburgh Carpentries and a certified Carpentries instructor in foundational coding and data science skills for researchers. 
+
+Title: Best Practices for Scientific Computing 
+
+Abstract:  
+Discussion of a key paper in research software engineering which makes recommendations for a set of practices to improve software developed for research, based on authors' experience and teaching, as well as research in the scientific computing and software engineering fields.  
+</div>
+
+
+## HOW TO (RE-)USE THIS MATERIAL
+
+This is a `.html` presentation created in `R Markdown` with `ioslides`. 
+
+(It's been written in a [.Rmd](http://rmarkdown.rstudio.com) file, and I generated .html slides by 'knitting' it in Rstudio.)
+
+You can check out the code used to make these slides at the [Talk repo](https://github.com/FlicAnderson/PhD10moReview) on Github, and adapt it for your own presentations if you like - there's a MIT Licence on the repo, which means: 
+
+*"Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."*
+
+Source: [tl;drLegal](https://tldrlegal.com/license/mit-license)
+
+
+## Outline 
+
+__Article:__  
+- paper format  
+- introduction / background / research context  
+- Best Practices  
+- conclusions
+ 
+__Discussion:__   
+- TODO  
+
+__RS: Research software__    
+__SE: Software engineering__ 
+
+
+
+# The Article 
+
+## Paper Format  
+
+* no abstract / discussion 
+* presenting best practice recommendations - these are the key  
+* reasonably informal paper  
+
+
+## introduction / background / research context  
+
+* published 2014  
+* RS field back then  
+* key papers before this  
+* published in PLOS Biology  
+* 'scientific computing' vs 'research software'   
+
+
+## 
+```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
+```  
+
+## Write programs for people, not computers 
+* ... 
+* ... 
+
+<div class="notes"> 
+This slideshow is written in R Markdown, not Latex, as it's easier for a human (e.g. me) to read the text in a markdown doc than a latex one. Also, fewer slashes required :D
+</div>
+
+
+
+## Let the computer do the work
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>
+
+
+
+## Make incremental changes
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+
+## Don't repeat yourself (or others)
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+
+## Plan for mistakes  
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+
+## Optimise software only after it works correctly
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+
+## Document design and purpose, not mechanics
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+
+## Collaborate
+* ... 
+* ... 
+
+<div class="notes"> 
+...
+</div>  
+
+
+## conclusions  
+* ...
+* ...
+
+
+
+# Discussion  
+
+## ... 
+
+* ...   
+* ...  
+* ...  
+
+
+
+## ... 
+
+* ...   
+* ...  
+* ...  
+
