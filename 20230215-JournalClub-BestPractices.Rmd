@@ -58,7 +58,7 @@ This is a `.html` presentation created in `R Markdown` with `ioslides`.
 
 (It's been written in a [.Rmd](http://rmarkdown.rstudio.com) file, and I generated .html slides by 'knitting' it in Rstudio.)
 
-You can check out the code used to make these slides at the [Talk repo](https://github.com/FlicAnderson/PhD10moReview) on Github, and adapt it for your own presentations if you like - there's a MIT Licence on the repo, which means: 
+You can check out the code used to make these slides at the [Talk repo](https://github.com/FlicAnderson/20230215-JournalClub-BestPractices/) on Github, and adapt it for your own presentations if you like - there's a MIT Licence on the repo, which means: 
 
 *"Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."*
 
@@ -124,11 +124,22 @@ This slideshow is written in R Markdown, not Latex, as it's easier for a human (
 
 
 ## Let the computer do the work
-* Don't try to be the computer  
-* ... 
+* repetitive tasks? _Don't try to be a computer_  
+* don't fear the **CLI**     
+* commonly repeated commands & tasks -> **scripts**     
+* combining scripts? Consider a **Workflow Management System\***   
+* **store provenance info** (common file formats plz):  
+  - raw data IDs, version numbers  
+  - _parameter_ values generating specific outputs  
+  - _library/program versions_  
+* **cite your software!**  
+
+<font size="3">CLI: command line interface; *: WfMS examples: nextflow, snakemake</font>  
 
 <div class="notes"> 
-...
+non-computing background folks miss out on 'command history' and repeatability by avoiding CLI :c   
+
+be reproducible - good for research, good for you!  
 </div>
 
 
