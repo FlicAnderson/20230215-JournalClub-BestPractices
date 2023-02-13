@@ -166,8 +166,10 @@ Avoid long development without feedback and course checks.
 
 
 ## 4. Don't repeat yourself (or others)
-* ... 
-* ... 
+* having **copies of data / 'code clones' is bad**: likely to cause inconsistency, errors, maintenance headaches...  
+* _'single authoritative representation in the system'_ means **only one version of a file / variable / ID** that can be updated in ONE PLACE ONLY  
+* write IKEA code: **modularity** -> fixable, reusable and easy to keep small 'chunks' in your head (_mental model_ of code) 
+* _stand on the shoulders of giants_: **use others' libraries and packages** instead of doing it yourself. 
 
 <div class="notes"> 
 ...
@@ -176,11 +178,13 @@ Avoid long development without feedback and course checks.
 
 
 ## 5. Plan for mistakes  
-* ... 
+* _defensive programming_: **use assertions** in your code: statements which _check inputs/outputs_, document & _explain your code_, and assist in (inevitable) _debugging_   
+* use _automated testing_:  
+  - 
 * ... 
 
 <div class="notes"> 
-...
+"to err is human", so why are we always surprised when things go wrong? :D 
 </div>  
 
 
