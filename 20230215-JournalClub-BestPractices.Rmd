@@ -105,7 +105,7 @@ __SE: Software engineering__
 knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
 ```  
 
-## Write programs for people, not computers 
+## 1. Write programs for people, not computers 
 * your code needs to _run_ and be _correct_, but also must be **understandable**  
 * _beware memory limits_ in users, not just computers: reduce cognitive load!  
 * **break up programs** into _task-oriented functions_ or chunks  
@@ -123,18 +123,18 @@ This slideshow is written in R Markdown, not Latex, as it's easier for a human (
 
 
 
-## Let the computer do the work
+## 2. Let the computer do the work
 * repetitive tasks? _Don't try to be a computer_  
 * don't fear the **CLI**     
 * commonly repeated commands & tasks -> **scripts**     
-* combining scripts? Consider a **Workflow Management System\***   
+* combining scripts? Consider a **Workflow Management System\*** or automated **build tool** like [Make](https://www.gnu.org/software/make/#:~:text=GNU%20Make%20is%20a%20tool,compute%20it%20from%20other%20files.)   
 * **store provenance info** (common file formats plz):  
   - raw data IDs, version numbers  
   - _parameter_ values generating specific outputs  
   - _library/program versions_  
 * **cite your software!**  
 
-<font size="3">CLI: command line interface; *: WfMS examples: nextflow, snakemake</font>  
+<font size="3">CLI: command line interface; *: WfMS examples: [nextflow](https://www.nextflow.io/), [snakemake](https://snakemake.readthedocs.io/en/stable/)</font>  
 
 <div class="notes"> 
 non-computing background folks miss out on 'command history' and repeatability by avoiding CLI :c   
@@ -144,7 +144,28 @@ be reproducible - good for research, good for you!
 
 
 
-## Make incremental changes
+## 3. Make incremental changes
+* **no 'requirements' available** upfront for RS     
+* RS uses an _iterate-improve_ process; similar to Agile development process  
+* **keep iterations SHORT** (~1 week), get feedback, improve  
+* use a **version control system** e.g. [Git](https://git-scm.com/):   
+  - tracks changes & reverts problems (code & data)   
+  - solves collaborating issues - locked files, multiple copies, overwrites, etc.  
+  - stores metadata and provenance  
+* **version control everything you create manually, regenerate the rest** (archive binaries, but store metadata about them with version control!)
+
+<div class="notes"> 
+
+RS isn't similar to 'traditional SE', IS sim to Open Source Software projects & startups re: no requirements from a 'customer'/user often.    
+Therefore RS can't apply a lot of requirements-oriented design and development processes.  
+
+Avoid long development without feedback and course checks.  
+
+</div>  
+
+
+
+## 4. Don't repeat yourself (or others)
 * ... 
 * ... 
 
@@ -154,7 +175,7 @@ be reproducible - good for research, good for you!
 
 
 
-## Don't repeat yourself (or others)
+## 5. Plan for mistakes  
 * ... 
 * ... 
 
@@ -164,7 +185,7 @@ be reproducible - good for research, good for you!
 
 
 
-## Plan for mistakes  
+## 6. Optimise software only after it works correctly
 * ... 
 * ... 
 
@@ -174,7 +195,7 @@ be reproducible - good for research, good for you!
 
 
 
-## Optimise software only after it works correctly
+## 7. Document design and purpose, not mechanics
 * ... 
 * ... 
 
@@ -184,17 +205,7 @@ be reproducible - good for research, good for you!
 
 
 
-## Document design and purpose, not mechanics
-* ... 
-* ... 
-
-<div class="notes"> 
-...
-</div>  
-
-
-
-## Collaborate
+## 8. Collaborate
 * ... 
 * ... 
 
