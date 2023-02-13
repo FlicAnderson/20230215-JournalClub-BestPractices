@@ -97,6 +97,7 @@ __SE: Software engineering__
 * key papers before this  
 * published in PLOS Biology  
 * 'scientific computing' vs 'research software'   
+* are YOU a research software engineer / researcher-developer? 
 
 
 ## 
@@ -105,17 +106,25 @@ knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-pract
 ```  
 
 ## Write programs for people, not computers 
-* ... 
-* ... 
+* your code needs to _run_ and be _correct_, but also must be **understandable**  
+* _beware memory limits_ in users, not just computers: reduce cognitive load!  
+* **break up programs** into _task-oriented functions_ or chunks  
+* helpful, **descriptive names** -> self documenting & less confusing  
+* **consistent_styling_of_code** -> faster reading, fewer errors  
 
 <div class="notes"> 
+
+These days, people are more memory limited than computers: reduce cognitive load!  
+
+Consistency means errors are easier to spot, humans are great at pattern recognition
+
 This slideshow is written in R Markdown, not Latex, as it's easier for a human (e.g. me) to read the text in a markdown doc than a latex one. Also, fewer slashes required :D
 </div>
 
 
 
 ## Let the computer do the work
-* ... 
+* Don't try to be the computer  
 * ... 
 
 <div class="notes"> 
