@@ -179,12 +179,26 @@ Avoid long development without feedback and course checks.
 
 ## 5. Plan for mistakes  
 * _defensive programming_: **use assertions** in your code: statements which _check inputs/outputs_, document & _explain your code_, and assist in (inevitable) _debugging_   
-* use _automated testing_:  
-  - 
-* ... 
+* run _automated testing_ with **testing libraries**: unit, integration & regression tests!  
+* **turn bugs into tests** (prevents silent reappearance of 'fixed' issues) for RS 
+* keeping tests in mind -> _more modular and orthogonal* code_  
+* **use debuggers**: they help understand and investigate program behaviour (stop/pause, inspect variables, step between levels of function calls)   
+
+<font size="3">*Orthogonality: independence of one variable/concept from another (e.g. editing _function a_ ideally shouldn't require also fixing _function b_) </font>  
 
 <div class="notes"> 
-"to err is human", so why are we always surprised when things go wrong? :D 
+"to err is human", so why are we always surprised when things go wrong? :D   
+
+* run & report _automated testing_ with **testing libraries**:  
+  - unit tests for single units of code correctness  
+  - integration tests for combining parts of code  
+  - regression tests to check whether behaviour stays the same as parts are edited  
+
+* RS might not allow Test-Driven Development because requirements may not exist upfront, so might need different approaches. 
+
+
+* debuggers: they help understand and investigate program behaviour
+
 </div>  
 
 
