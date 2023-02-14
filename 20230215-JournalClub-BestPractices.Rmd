@@ -68,10 +68,10 @@ Source: [tl;drLegal](https://tldrlegal.com/license/mit-license)
 ## Outline 
 
 __Article:__  
-- paper format  
-- introduction / background / research context  
+- Paper format  
+- Background / research context  
 - Best Practices  
-- conclusions
+- Conclusions
  
 __Discussion:__   
 - TODO  
@@ -89,24 +89,46 @@ TODO ADD IMAGE of article to slide, show authors, DOI etc.
 
 ## Paper Format  
 
-* no abstract / discussion 
-* presenting best practice recommendations - these are the key  
-* reasonably informal paper  
-* selected this because it's personally impactful  
+* presenting 8 broad best practice tips & 24 recommendations     
+* no abstract / methods / research Qs / discussion    
+* reasonably informal paper, accessible and readable    
+* selected this because it's personally impactful and has influenced my career!   
 
 
-## introduction / background / research context  
+## Background / Research context  
 
-* published 2014  
-* RS field back then  
-* key papers before this  
-* published in PLOS Biology  
-* 'scientific computing' vs 'research software'   
+* published 2014 @ PLOS Biology   
+* [Wilson 2006](https://doi-org.ezproxy.is.ed.ac.uk/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas expanded on in the 2014 paper  
+* Carpentries' reports gathered data from foundational programming/data skills workshop evaluations  
+* 
 
 <div class="notes"> 
+
+* RS field back then  
+* key papers before this  
+* 'scientific computing' vs 'research software'   
+
 Q: Are YOU a research software engineer / researcher-developer? If you think not, do you write code as part of your research?  
 
 This paper was published in a Biology journal, and mentions 'scientific computing', but it's really widely relevant to all research and research software development.  
+</div>
+
+
+
+##   
+```{r, echo=FALSE,out.width="85%", out.height="25%",fig.align='center'}
+knitr::include_graphics("images/best-practices-justification.png")
+```  
+
+* authors' goals in publishing these best practices:  
+  - more productive development of RS  
+  - faster results for research  
+  - code is more reliable, inspires confidence in results  
+  - easier (/actually possible) to reproduce results - good research practice
+
+
+<div class="notes"> 
+...
 </div>
 
 
@@ -270,14 +292,16 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 ## Conclusions  
 * authors collated their experiences and existing research  
 * useful for solo coders or multi-dev research software teams  
-* benefits:  
-  - more productive development of RS  
-  - faster results for research  
-  - code is more reliable, inspires confidence in results  
-  - easier (/actually possible) to reproduce results - good research practice    
 * authors advise NOT doing all of these at once if you aren't already - add practices gradually  
 * due to overlap between practices, not too insurmountable to adopt  
-* reference a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains 
+* references a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains 
+* subsequent paper: Wilson et al. 2017: [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) in PLOS Computational Biology
+
+<div class="notes"> 
+...
+</div>  
+
+
 
 
 ## This Paper Might Change Your Career...
