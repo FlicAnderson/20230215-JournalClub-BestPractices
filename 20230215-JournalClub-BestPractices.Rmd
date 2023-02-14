@@ -97,12 +97,39 @@ TODO ADD IMAGE of article to slide, show authors, DOI etc.
 
 ## Background / Research context  
 
-* published 2014 @ PLOS Biology   
-* [Wilson 2006](https://doi-org.ezproxy.is.ed.ac.uk/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas expanded on in the 2014 paper  
-* Carpentries' reports gathered data from foundational programming/data skills workshop evaluations  
-* 
+* article published 2014 @ PLOS Biology   
+* [Wilson 2006](https://doi.org/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas expanded on in the 2014 paper  
+* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE* software" (minimalist!)  
+* [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software" 
+* Carpentries' reports (2004+) gathered data from foundational programming/data skills workshop evaluations   
+* discusses scientific computing, but applies widely to any software used for generating research outputs  
 
-<div class="notes"> 
+<font size="3">*CSE: Computational Science and Engineering</font>  
+
+
+<div class="notes">
+
+* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE* software"  
+  0) Manage source (the basics)   
+  1) Use issue-tracking software for requirements, features and bugs  
+  2) Manage source (beyond the basics)  
+  3) Use mail lists to communicate  
+  4) Use checklists for repeated processes  
+  5) Create barely sufficient, source-centric documentation  
+  6) Use configuration management tools  
+  7) Write tests first, run them often  
+  8) Program tough stuff together  
+  9) Use a formal release process  
+  10) Perform continual process improvement  
+  
+
+
+* [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software"   
+ - Separate  
+ - Organise   
+ - Review   
+ - Test  
+ - Simplify  
 
 * RS field back then  
 * key papers before this  
@@ -115,17 +142,17 @@ This paper was published in a Biology journal, and mentions 'scientific computin
 
 
 
-##   
+## Paper's Aims   
 ```{r, echo=FALSE,out.width="85%", out.height="25%",fig.align='center'}
 knitr::include_graphics("images/best-practices-justification.png")
 ```  
 
-* authors' goals in publishing these best practices:  
+* authors' goals in sharing these best practices:  
   - more productive development of RS  
   - faster results for research  
   - code is more reliable, inspires confidence in results  
   - easier (/actually possible) to reproduce results - good research practice
-
+* justifies importance of these in terms of reducing errors/retractions; improving research productivity  
 
 <div class="notes"> 
 ...
