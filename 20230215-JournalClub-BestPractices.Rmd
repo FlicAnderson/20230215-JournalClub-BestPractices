@@ -83,11 +83,16 @@ __SE: Software engineering__
 
 # The Article 
 
+## TODO: pic of article 
+TODO ADD IMAGE of article to slide, show authors, DOI etc.  
+
+
 ## Paper Format  
 
 * no abstract / discussion 
 * presenting best practice recommendations - these are the key  
 * reasonably informal paper  
+* selected this because it's personally impactful  
 
 
 ## introduction / background / research context  
