@@ -97,7 +97,12 @@ __SE: Software engineering__
 * key papers before this  
 * published in PLOS Biology  
 * 'scientific computing' vs 'research software'   
-* are YOU a research software engineer / researcher-developer? 
+
+<div class="notes"> 
+Q: Are YOU a research software engineer / researcher-developer? If you think not, do you write code as part of your research?  
+
+This paper was published in a Biology journal, and mentions 'scientific computing', but it's really widely relevant to all research and research software development.  
+</div>
 
 
 ## 
@@ -204,8 +209,13 @@ Avoid long development without feedback and course checks.
 
 
 ## 6. Optimise software only after it works correctly
-* ... 
-* ... 
+* don't fix imaginary/hypothetical performance bottlenecks - write, then profile THEN fix   
+* write high-level code:  
+  - it's more time efficient for development per line of code per unit of time   
+  - higher-level code is more understandable for others / more self-documenting    
+  - prototype in high-level languages for proof of concept/design testing, THEN implement optimised versions in lower level languages like C  
+  - test low-level reimplementations against your high-level prototype to test outputs & functionality  
+  
 
 <div class="notes"> 
 ...
@@ -214,43 +224,92 @@ Avoid long development without feedback and course checks.
 
 
 ## 7. Document design and purpose, not mechanics
-* ... 
-* ... 
+* RS can be complex - documentation can help share knowledge, reusability, and lower maintenance time/effort     
+* what if the code author leaves? (bus factor*!)   
+* avoid restating what code does. Instead: why does it do it THIS WAY. Explain design decisions  
+* better to **refactor**** than try to explain really complex chunks of code if possible...  
+* documentation generators: build docs into the code - avoids code 'outgrowing' docs/docs becoming stale. (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
+* "literate programming" - build the code into the docs! (e.g. [Jupyter Notebooks](https://jupyter.org/) for Python+)
+
+
+<font size="3">*Bus Factor: "how many people on the project have to get hit by a bus before nobody understands the code?" </font>  
+<font size="3">**Refactoring: re-writing code to improve understandability without changing its overall behaviour and outputs</font>  
 
 <div class="notes"> 
-...
+
+Refactoring: re-writing code to improve understandability, consistency and general design without changing its overall behaviour and outputs.
+
+Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Ruby and probably more. 
+
 </div>  
 
 
 
 ## 8. Collaborate
-* ... 
-* ... 
+* "code review: get other people to read your code to find bugs fast & cheap!" - says decades of research  
+* code review spreads knowledge around the project team  
+* if you don't need to review before merging code, you probably won't review at all - require it!     
+* pair programming: 'driver' + 'navigator' => great for complex coding tasks or onboarding new folks to project  
+* use issue tracking (eg. Github) to help team track milestones, task progress, and who is doing what  
+* keep in mind that your future self is a collaborator - be nice!  
 
 <div class="notes"> 
-...
+
+* code review spreads knowledge around the project team   
+
+* your future self is a collaborator, as are potential reviewers, supervisors, your future PhD students, peers who'll use your software, your spin-out company, the Nobel Committee etc.  
+
 </div>  
 
 
-## conclusions  
-* ...
-* ...
+## Conclusions  
+* authors collated their experiences and existing research  
+* useful for solo coders or multi-dev research software teams  
+* benefits:  
+  - more productive development of RS  
+  - faster results for research  
+  - code is more reliable, inspires confidence in results  
+  - easier (/actually possible) to reproduce results - good research practice    
+* authors advise NOT doing all of these at once if you aren't already - add practices gradually  
+* due to overlap between practices, not too insurmountable to adopt  
+* reference a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains 
 
+
+## Personal Influences
+* in undergrad, I got 2% on a programming exam and was told "no use flogging a dead horse"... I didn't code for years after this! ('Not for me')   
+* I attended my first Software Carpentry workshop in 2014, first Data Carpentry workshop in 2016   
+* came across this paper around then and was inspired by the summary of what I could/should be doing with my research code  
+* started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal    
+* even though I was working solo, I started Writing Programs for People, Not Computers. That person was me, but still...
+* by adopting many of these best practices and Making Incremental Changes, I got bioinformatics role on a development team (UoEdinburgh), met EPCC staff   
+* started Planning for Mistakes (dipping my toes into testing/debugging), did a lot of Collaboration (developing with 2x US labs and undergrad/masters students) & Documenting Design & Purpose (also helpful for onboarding students and expanding the dev team!).     
+* May 2020 trained as a Carpentries Instructor to help spread the Best Practices further  
+* started a PhD looking at practices in Research Software Engineering at EPCC in Jan 2022 with Neil Chue Hong (co-author on this paper!)  
+* ... (still haven't quite gotten around to Optimising Software Only After It Works Correctly... (though I never write lower-level code ;D))  
+* hugely influential!  
 
 
 # Discussion  
 
-## ... 
+## Questions? 
 
-* ...   
-* ...  
-* ...  
+* Opinions of the paper's 'best practices'? - anything missing?  
+* Was it successful?  
+* Which is most important to you? Why?  
+* Which do you need to do more of? Why? 
+
+
+## Most important to you?
+```{r, echo=FALSE,out.width="44%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
+```  
+
+## Need to do more of...?
+```{r, echo=FALSE,out.width="44%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
+```  
 
 
 
-## ... 
 
-* ...   
-* ...  
-* ...  
 
