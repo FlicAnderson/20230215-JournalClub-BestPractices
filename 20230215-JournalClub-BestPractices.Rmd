@@ -280,18 +280,42 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 * reference a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains 
 
 
-## Personal Influences
-* in undergrad, I got 2% on a programming exam and was told "no use flogging a dead horse"... I didn't code for years after this! ('Not for me')   
-* I attended my first Software Carpentry workshop in 2014, first Data Carpentry workshop in 2016   
-* came across this paper around then and was inspired by the summary of what I could/should be doing with my research code  
-* started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal    
+## This Paper Might Change Your Career...
+
+```{r, echo=FALSE,out.width="95%", out.height="17%",fig.align='center'}
+knitr::include_graphics("images/best-practices-timeline.png")
+```  
+
+
+
+
+<div class="notes"> 
+
+* 2007: first year programming exam: 2%. Told "no use flogging a dead horse"... 
+* 2013: Research Assistant job at Royal Botanic Garden Edinburgh, biodiversity data work with spreadsheets & MS Access!  
+* 2013: first steps in R... 
+* 2014: Software Carpentry workshop   
+* ~2015: came across this paper, inspired by pragmatic tips on what I could/should be doing  
+* 2016: Data Carpentry workshop  
+* 2019: Research Assistant in Bioinformatics at UoEdinburgh on a development team for open source research software project 'riboviz'
+* 2020 trained as a Carpentries Instructor to help spread the Best Practices further  
+* 2022: started PhD looking at practices in Research Software Engineering at EPCC with Neil Chue Hong (co-author on this paper!)  
+
+* came across this paper around 2015 and was inspired by the summary of what I could/should be doing with my research code  
+
+* started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal  
+
 * even though I was working solo, I started Writing Programs for People, Not Computers. That person was me, but still...
+
 * by adopting many of these best practices and Making Incremental Changes, I got bioinformatics role on a development team (UoEdinburgh), met EPCC staff   
+
 * started Planning for Mistakes (dipping my toes into testing/debugging), did a lot of Collaboration (developing with 2x US labs and undergrad/masters students) & Documenting Design & Purpose (also helpful for onboarding students and expanding the dev team!).     
-* May 2020 trained as a Carpentries Instructor to help spread the Best Practices further  
-* started a PhD looking at practices in Research Software Engineering at EPCC in Jan 2022 with Neil Chue Hong (co-author on this paper!)  
+
 * ... (still haven't quite gotten around to Optimising Software Only After It Works Correctly... (though I never write lower-level code ;D))  
-* hugely influential!  
+
+</div>
+
+
 
 
 # Discussion  
