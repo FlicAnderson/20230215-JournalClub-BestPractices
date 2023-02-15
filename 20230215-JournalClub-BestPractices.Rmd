@@ -97,7 +97,7 @@ knitr::include_graphics("images/best-practices-article.png")
 * _influenced my career_   
 
 
-## Background / Research context  
+## Background / Research Context  
 
 * article published 2014 @ PLOS Biology   
 * [Wilson 2006](https://doi.org/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas  
@@ -141,7 +141,7 @@ This paper was published in a Biology journal, and mentions 'scientific computin
 
 
 
-## 
+## MY Background/ Research Context
 <br>
 ```{r, echo=FALSE,out.width="90%",fig.align='center'}
 knitr::include_graphics("images/best-practices-timeline_before.png")
@@ -276,7 +276,7 @@ Avoid long development without feedback and course checks.
 </div>  
 
 
-## 
+## Update...
 <br>
 ```{r, echo=FALSE,out.width="90%",fig.align='center'}
 knitr::include_graphics("images/best-practices-timeline_during.png")
