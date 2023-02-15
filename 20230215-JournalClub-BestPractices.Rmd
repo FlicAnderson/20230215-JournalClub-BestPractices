@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <script>
     $(document).ready(function() {
-      $('slide:not(.title-slide, .backdrop, .segue)').append('<footer label=\"BestPracticesSciComp"></footer>');    
+      $('slide:not(.title-slide, .backdrop, .segue)').append('<footer label="Journal Club: Wilson et al. (2014) \'Best Practices for Scientific Computing\'"></footer>');    
     })
 </script>
 
