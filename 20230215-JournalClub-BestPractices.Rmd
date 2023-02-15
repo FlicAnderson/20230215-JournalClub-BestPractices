@@ -70,13 +70,14 @@ Source: [tl;drLegal](https://tldrlegal.com/license/mit-license)
 __Article:__  
 - Paper format  
 - Background / research context  
+- Paper's aims 
 - Best Practices   
 - Authors' conclusions
  
-__Qs & Discussion:__   
-- My opinions about the paper 
-- Your questions about the paper  
-- Discussion - which best practice do you think is most important? 
+__Discussion & Qs:__   
+- My opinions about the paper  
+- Your questions about the paper    
+- Discussion - which best practice do you think is most important?  
 
 __RS: Research software__    
 __SE: Software engineering__ 
@@ -100,16 +101,15 @@ knitr::include_graphics("images/best-practices-article.png")
 
 * article published 2014 @ PLOS Biology   
 * [Wilson 2006](https://doi.org/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas expanded on in the 2014 paper  
-* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE* software" (minimalist!)  
+* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE software" (minimalist!)  
 * [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software" 
 * Carpentries' reports (2004+) gathered data from foundational programming/data skills workshop evaluations   
 * discusses scientific computing, but applies widely to any software used for generating research outputs  
 
-<font size="3">*CSE: Computational Science and Engineering</font>  
-
 
 <div class="notes">
-
+<font size="3">*CSE: Computational Science and Engineering</font> 
+```
 * [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE* software"  
   0) Manage source (the basics)   
   1) Use issue-tracking software for requirements, features and bugs  
@@ -123,14 +123,13 @@ knitr::include_graphics("images/best-practices-article.png")
   9) Use a formal release process  
   10) Perform continual process improvement  
   
-
 * [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software"   
  - Separate  
  - Organise   
  - Review   
  - Test  
  - Simplify  
-
+```
 * RS field back then  
 * key papers before this  
 * 'scientific computing' vs 'research software'   
@@ -138,6 +137,22 @@ knitr::include_graphics("images/best-practices-article.png")
 Q: Are YOU a research software engineer / researcher-developer? If you think not, do you write code as part of your research?  
 
 This paper was published in a Biology journal, and mentions 'scientific computing', but it's really widely relevant to all research and research software development.  
+</div>
+
+
+
+## 
+<br>
+```{r, echo=FALSE,out.width="90%",fig.align='center'}
+knitr::include_graphics("images/best-practices-timeline_before.png")
+``` 
+
+<div class="notes"> 
+
+* 2007: first year programming exam: 2%. Told "no use flogging a dead horse"... 
+* 2013: Research Assistant job at Royal Botanic Garden Edinburgh, biodiversity data work with spreadsheets & MS Access!  
+* 2013: first steps in R... 
+
 </div>
 
 
@@ -202,17 +217,15 @@ This slideshow is written in R Markdown, not Latex, as it's easier for a human (
 
 
 ## 2. Let the computer do the work
-* repetitive tasks? _Don't try to be a computer_  
-* don't fear the **CLI**     
-* commonly repeated commands & tasks -> **scripts**     
+* **CLI** commands & tasks -> **scripts**     
 * combining scripts? Consider a **Workflow Management System\*** or automated **build tool** like [Make](https://www.gnu.org/software/make/#:~:text=GNU%20Make%20is%20a%20tool,compute%20it%20from%20other%20files.)   
 * **store provenance info** (common file formats plz):  
   - raw data IDs, version numbers  
   - _parameter_ values generating specific outputs  
   - _library/program versions_  
-* **cite your software!**  
+* cite your software!
 
-<font size="3">CLI: command line interface; *: WfMS examples: [nextflow](https://www.nextflow.io/), [snakemake](https://snakemake.readthedocs.io/en/stable/)</font>  
+<font size="3">WfMS examples: [nextflow](https://www.nextflow.io/), [snakemake](https://snakemake.readthedocs.io/en/stable/)</font>  
 
 <div class="notes"> 
 non-computing background folks miss out on 'command history' and repeatability by avoiding CLI :c   
@@ -226,11 +239,10 @@ be reproducible - good for research, good for you!
 * **no 'requirements' available** upfront for RS     
 * RS uses an _iterate-improve_ process; similar to Agile development process  
 * **keep iterations SHORT** (~1 week), get feedback, improve  
-* use a **version control system** e.g. [Git](https://git-scm.com/):   
+* use a **version control system** e.g. Git:   
   - tracks changes & reverts problems (code & data)   
-  - solves collaborating issues - locked files, multiple copies, overwrites, etc.  
-  - stores metadata and provenance  
-* **version control everything you create manually, regenerate the rest** (archive binaries, but store metadata about them with version control!)
+  - solves collaborating issues  
+* **version control everything you create manually**, regenerate the rest (archive binaries, store metadata)
 
 <div class="notes"> 
 
@@ -239,30 +251,52 @@ Therefore RS can't apply a lot of requirements-oriented design and development p
 
 Avoid long development without feedback and course checks.  
 
+* **version control everything you create manually**, regenerate the rest (archive binaries, but store metadata about them with version control!)
+(https://git-scm.com/) 
+
 </div>  
 
 
 
 ## 4. Don't repeat yourself (or others)
+* __copies of data / 'code clones' is bad__  
+* **only one version of a file / variable / ID** that can be updated in ONE PLACE ONLY  
+* write IKEA code: **modularity** -> fixable, reusable and easy to remember (_mental model_ of code)  
+* **use others' libraries and packages** instead of doing it yourself 
+
+<div class="notes"> 
 * having **copies of data / 'code clones' is bad**: likely to cause inconsistency, errors, maintenance headaches...  
 * _'single authoritative representation in the system'_ means **only one version of a file / variable / ID** that can be updated in ONE PLACE ONLY  
 * write IKEA code: **modularity** -> fixable, reusable and easy to keep small 'chunks' in your head (_mental model_ of code) 
 * _stand on the shoulders of giants_: **use others' libraries and packages** instead of doing it yourself. 
-
-<div class="notes"> 
-...
 </div>  
+
+
+## 
+<br>
+```{r, echo=FALSE,out.width="90%",fig.align='center'}
+knitr::include_graphics("images/best-practices-timeline_during.png")
+``` 
+<div class="notes"> 
+
+* 2014: Software Carpentry workshop   
+* ~2015: came across this paper, inspired by pragmatic tips on what I could/should be doing  
+* 2016: Data Carpentry workshop  
+
+* came across this paper around 2015 and was inspired by the summary of what I could/should be doing with my research code  
+* started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal  
+* even though I was working solo, I started Writing Programs for People, Not Computers. That person was me, but still...
+</div>
 
 
 
 ## 5. Plan for mistakes  
-* _defensive programming_: **use assertions** in your code: statements which _check inputs/outputs_, document & _explain your code_, and assist in (inevitable) _debugging_   
-* run _automated testing_ with **testing libraries**: unit, integration & regression tests!  
+* _defensive programming_: **use assertions** in your code  
+* run _automated testing_ with **testing libraries**  
 * **turn bugs into tests** (prevents silent reappearance of 'fixed' issues) for RS 
-* keeping tests in mind -> _more modular and orthogonal* code_  
-* **use debuggers**: they help understand and investigate program behaviour (stop/pause, inspect variables, step between levels of function calls)   
+* keeping tests in mind -> _more modular and orthogonal code_  
+* **use debuggers**  
 
-<font size="3">*Orthogonality: independence of one variable/concept from another (e.g. editing _function a_ ideally shouldn't require also fixing _function b_) </font>  
 
 <div class="notes"> 
 "to err is human", so why are we always surprised when things go wrong? :D   
@@ -274,6 +308,13 @@ Avoid long development without feedback and course checks.
 
 * RS might not allow Test-Driven Development because requirements may not exist upfront, so might need different approaches. 
 
+* _defensive programming_: **use assertions** in your code: statements which _check inputs/outputs_, document & _explain your code_, and assist in (inevitable) _debugging_   
+* run _automated testing_ with **testing libraries**: unit, integration & regression tests!  
+* **turn bugs into tests** (prevents silent reappearance of 'fixed' issues) for RS 
+* keeping tests in mind -> _more modular and orthogonal* code_  
+* **use debuggers**: they help understand and investigate program behaviour (stop/pause, inspect variables, step between levels of function calls)   
+
+<font size="3">*Orthogonality: independence of one variable/concept from another (e.g. editing _function a_ ideally shouldn't require also fixing _function b_) </font> 
 
 * debuggers: they help understand and investigate program behaviour
 
@@ -295,10 +336,10 @@ ref 62 in paper for high vs low level development efficiency: Prechelt L (2010) 
 
 
 ## 7. Document design and purpose, not mechanics
-* share knowledge **(bus factor!)**, lower maintenance time/effort     
+* share knowledge __(bus factor!)__       
 * **explain design decisions**  
-* **refactor** instead of trying to explain complex code 
-* _documentation generators_: docs into code (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
+* **refactor** instead of trying to explain complex code  
+* _documentation generators_: **embed docs** into code (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
 * _"literate programming"_ - code into docs! ([Jupyter Notebooks](https://jupyter.org/) for Python+)
 
 
@@ -345,28 +386,18 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 </div>  
 
 
-
 ## This Paper Might Change Your Career...
-
-```{r, echo=FALSE,out.width="95%", out.height="17%",fig.align='center'}
-knitr::include_graphics("images/best-practices-timeline.png")
-```  
+<br>
+```{r, echo=FALSE,out.width="95%",fig.align='center'}
+knitr::include_graphics("images/best-practices-timeline_after.png")
+``` 
 
 <div class="notes"> 
 
-* 2007: first year programming exam: 2%. Told "no use flogging a dead horse"... 
-* 2013: Research Assistant job at Royal Botanic Garden Edinburgh, biodiversity data work with spreadsheets & MS Access!  
-* 2013: first steps in R... 
-* 2014: Software Carpentry workshop   
-* ~2015: came across this paper, inspired by pragmatic tips on what I could/should be doing  
-* 2016: Data Carpentry workshop  
 * 2019: Research Assistant in Bioinformatics at UoEdinburgh on a development team for open source research software project 'riboviz'
 * 2020 trained as a Carpentries Instructor to help spread the Best Practices further  
 * 2022: started PhD looking at practices in Research Software Engineering at EPCC with Neil Chue Hong (co-author on this paper!)  
 
-* came across this paper around 2015 and was inspired by the summary of what I could/should be doing with my research code  
-* started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal  
-* even though I was working solo, I started Writing Programs for People, Not Computers. That person was me, but still...
 * by adopting many of these best practices and Making Incremental Changes, I got bioinformatics role on a development team (UoEdinburgh), met EPCC staff   
 * started Planning for Mistakes (dipping my toes into testing/debugging), did a lot of Collaboration (developing with 2x US labs and undergrad/masters students) & Documenting Design & Purpose (also helpful for onboarding students and expanding the dev team!).     
 * ... (still haven't quite gotten around to Optimising Software Only After It Works Correctly... (though I never write lower-level code ;D))  
@@ -378,10 +409,10 @@ knitr::include_graphics("images/best-practices-timeline.png")
 # Discussion  
 
 ## My Opinions 
-* well-written, supports aims of the paper  
+* well-written, supports aims of the paper: **successful!**  
 * **explains SE concepts well** to non-specialists  
-* progressing order of recommendations  
-* might put off extreme novices/experts? (e.g. optimisation/profiling)  
+* **escalating order** of recommendations  
+* _possibly off-putting_ to extreme novices/experts? (e.g. optimisation/profiling)  
 * Wilson et al. 2017: [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) in PLOS Computational Biology 
 
 Q: did publishing in PLOS Biology limit reach into other fields?  
@@ -398,9 +429,9 @@ Q: did publishing in PLOS Biology limit reach into other fields?
 * 2017 paper focuses more on data and research project management practices, reduce SE techniques e.g 'symbolic debugger', 'pair programming'. Collaboration shifted forward to #3 after Software at #2.  
 * now there are research software departments in most large universities, and recognition of the 'research software engineer' role - certainly more awareness of the concepts, but is there more uptake? 
 
-
 In the 2017 paper they focus more on data and research project management practices, reduce the SE techniques chat e.g 'symbolic debugger', 'pair programming'. Collaboration gets shifted forward to #2 though. 
 
+```
 Wilson et al. 2017: Good Enough Practices in Scientific Computing: 
 Summary of practices: 
 
@@ -453,17 +484,13 @@ Summary of practices:
 6) Manuscripts 
  - Write manuscripts using online tools with rich formatting, change tracking, and reference management. 
  - Write the manuscript in a plain text format that permits version control.
-
+```
 </div>
 
 
 
 
-
-## Questions? 
-
-* Opinions of the paper's 'best practices'? - anything missing?  
-* Which practice do you think is most important? Why?  
+# Any Questions? 
 
 
 
@@ -488,7 +515,10 @@ Summary of practices:
 
 <font size="4">'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)</font>
 
-
+<div class="notes"> 
+* Any opinions on the paper's 'best practices'? Anything missing?  
+* Which practice do you think is most important? Why?  
+</div>
 
 
 
