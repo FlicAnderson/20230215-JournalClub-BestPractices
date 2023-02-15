@@ -198,13 +198,14 @@ knitr::include_graphics("images/best-practices-justification-highlight.png")
 
 
 ## 1. Write programs for people, not computers 
-* your code needs to _run_ and be _correct_, but also must be **understandable**  
-* _beware memory limits_ in users, not just computers: reduce cognitive load!  
-* **break up programs** into _task-oriented functions_ or chunks  
-* helpful, **descriptive names** -> self documenting & less confusing  
+* _beware memory limits_ in users, not just computers: reduce cognitive load!   
+   - **break up programs** into _task-oriented functions_ or chunks  
+* self documenting **descriptive names**   
 * **consistent_styling_of_code** -> faster reading, fewer errors  
 
 <div class="notes"> 
+
+* your code needs to _run_ and be _correct_, but also must be **understandable**  
 
 These days, people are more memory limited than computers: reduce cognitive load!  
 
@@ -217,7 +218,7 @@ This slideshow is written in R Markdown, not Latex, as it's easier for a human (
 
 ## 2. Let the computer do the work
 * **CLI** commands & tasks -> **scripts**     
-* combining scripts? Consider a **Workflow Management System\*** or automated **build tool** like [Make](https://www.gnu.org/software/make/#:~:text=GNU%20Make%20is%20a%20tool,compute%20it%20from%20other%20files.)   
+* **automate workflows** with a _Workflow Management System_ or _build tool_ like [Make](https://www.gnu.org/software/make/#:~:text=GNU%20Make%20is%20a%20tool,compute%20it%20from%20other%20files.)   
 * **store provenance info** (common file formats plz):  
   - raw data IDs, version numbers  
   - _parameter_ values generating specific outputs  
@@ -235,11 +236,12 @@ be reproducible - good for research, good for you!
 
 
 ## 3. Make incremental changes
-* _no 'requirements' available_ upfront for RS     
 * RS uses an _iterate-improve_ process; similar to Agile development process  
+  - _no 'requirements' available_ upfront for RS  
 * **keep iterations SHORT** (~1 week), get feedback, improve  
-* use **version control system** for code AND data  
-* version control **everything you create manually**, _regenerate_ the rest (archive binaries, store metadata)
+* use **version control system** for code AND data 
+  - **vc manually created things**...  
+  - _regenerate_ the rest (archive binaries, store metadata)
 
 <div class="notes"> 
 
@@ -337,7 +339,7 @@ ref 62 in paper for high vs low level development efficiency: Prechelt L (2010) 
 
 
 ## 7. Document design and purpose, not mechanics
-* share knowledge __(bus factor!)__       
+* share knowledge _(bus factor!)_       
 * **explain design decisions**  
 * **refactor** instead of trying to explain complex code  
 * _documentation generators_: **embed docs** into code (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
