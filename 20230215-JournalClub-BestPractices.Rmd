@@ -85,7 +85,7 @@ __SE: Software engineering__
 
 
 ## The Article
-```{r, echo=FALSE,out.width="90%", out.height="25%",fig.align='center'}
+```{r, echo=FALSE,out.width="70%", out.height="25%",fig.align='center'}
 knitr::include_graphics("images/best-practices-article.png")
 ``` 
 
@@ -99,12 +99,12 @@ knitr::include_graphics("images/best-practices-article.png")
 
 ## Background / Research Context  
 
-* article published 2014 @ PLOS Biology   
-* [Wilson 2006](https://doi.org/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive" - prototype ideas  
-* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE software" (minimalist!)  
+* article **published 2014** @ _PLOS Biology_   
+* [Wilson 2006](https://doi.org/10.1109/MCSE.2006.122) paper "Software Carpentry: getting scientists to write better code by making them more productive"    
+* [Heroux & Willenbring 2009](https://doi.org/10.1109/SECSE.2009.5069157) "Barely sufficient software engineering: 10 practices to improve your CSE software"   
 * [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software" 
-* Carpentries' reports (2004+) gathered data from foundational programming/data skills workshop evaluations   
-* discusses scientific computing, but applies widely to any software used for generating research outputs  
+* Carpentries' reports (2004+) gathered data from foundational programming/data skills _workshop evaluations_   
+* discusses **scientific computing**, but applies widely to _any software for generating research outputs_  
 
 
 <div class="notes">
