@@ -1,9 +1,9 @@
 ---
-title: "Journal Club: *Best Practices for Scientific Computing*"
+title: 'Journal Club: *Best Practices for Scientific Computing*'
 author: "Flic Anderson"
 date: "15/02/2023"
-output: 
-  ioslides_presentation: 
+output:
+  ioslides_presentation:
     logo: images/logo.svg
 ---
 
