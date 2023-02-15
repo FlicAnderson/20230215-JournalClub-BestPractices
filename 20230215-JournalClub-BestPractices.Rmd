@@ -159,10 +159,29 @@ knitr::include_graphics("images/best-practices-justification.png")
 </div>
 
 
+
 ## 
-```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
-```  
+
+1 - **Write programs for people, not computers**   
+
+2 - **Let the computer do the work**   
+
+3 - **Make incremental changes**   
+
+4 - **Don't repeat yourself (or others)**  
+
+
+5 - **Plan for mistakes**   
+
+6 - **Optimise software only after it works correctly**  
+
+7 - **Document design and purpose, not mechanics**  
+
+8 - **Collaborate**  
+
+<font size="4">'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)</font>
+
+
 
 ## 1. Write programs for people, not computers 
 * your code needs to _run_ and be _correct_, but also must be **understandable**  
@@ -263,33 +282,30 @@ Avoid long development without feedback and course checks.
 
 
 ## 6. Optimise software only after it works correctly
-* don't fix imaginary/hypothetical performance bottlenecks - write, then profile THEN fix   
-* write high-level code:  
-  - it's more time efficient for development per line of code per unit of time   
-  - higher-level code is more understandable for others / more self-documenting    
-  - prototype in high-level languages for proof of concept/design testing, THEN implement optimised versions in lower level languages like C  
-  - test low-level reimplementations against your high-level prototype to test outputs & functionality  
+* **write, profile THEN fix** performance bottlenecks
+* **write high-level code**:  
+  - more efficient _per line of code per unit of time_   
+  - more understandable / self-documenting    
+  - prototype in high-level languages, THEN implement optimised versions  
   
-
 <div class="notes"> 
-...
+ref 62 in paper for high vs low level development efficiency: Prechelt L (2010) "Two comparisons of programming languages" in book: Making software: what really works and why we believe it  (O'Reilly)
 </div>  
 
 
 
 ## 7. Document design and purpose, not mechanics
-* RS can be complex - documentation can help share knowledge, reusability, and lower maintenance time/effort     
-* what if the code author leaves? (bus factor*!)   
-* avoid restating what code does. Instead: why does it do it THIS WAY. Explain design decisions  
-* better to **refactor**** than try to explain really complex chunks of code if possible...  
-* documentation generators: build docs into the code - avoids code 'outgrowing' docs/docs becoming stale. (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
-* "literate programming" - build the code into the docs! (e.g. [Jupyter Notebooks](https://jupyter.org/) for Python+)
+* share knowledge **(bus factor!)**, lower maintenance time/effort     
+* **explain design decisions**  
+* **refactor** instead of trying to explain complex code 
+* _documentation generators_: docs into code (Try [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)) 
+* _"literate programming"_ - code into docs! ([Jupyter Notebooks](https://jupyter.org/) for Python+)
 
-
-<font size="3">*Bus Factor: "how many people on the project have to get hit by a bus before nobody understands the code?" </font>  
-<font size="3">**Refactoring: re-writing code to improve understandability without changing its overall behaviour and outputs</font>  
 
 <div class="notes"> 
+
+<font size="3">*Bus Factor: "how many people have to get hit by a bus before nobody understands the code?" </font>  
+<font size="3">**Refactoring: re-writing code to improve understandability without changing its overall behaviour and outputs</font>  
 
 Refactoring: re-writing code to improve understandability, consistency and general design without changing its overall behaviour and outputs.
 
@@ -300,33 +316,32 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 
 
 ## 8. Collaborate
-* "code review: get other people to read your code to find bugs fast & cheap!" - says decades of research  
-* code review spreads knowledge around the project team  
-* if you don't need to review before merging code, you probably won't review at all - require it!     
-* pair programming: 'driver' + 'navigator' => great for complex coding tasks or onboarding new folks to project  
-* use issue tracking (eg. Github) to help team track milestones, task progress, and who is doing what  
-* keep in mind that your future self is a collaborator - be nice!  
+* "code review: _get other people to read your code to find bugs fast & cheap!"_ - says decades of research  
+  - require review **before merging**!      
+* **pair programming** for complex coding tasks or onboarding new folks to project  
+* use **issue tracking** (eg. Github) 
+* your future self...
 
 <div class="notes"> 
 
 * code review spreads knowledge around the project team   
-
+* pair programming: 'driver' + 'navigator' => great for complex coding tasks or onboarding new folks to project  
+* use issue tracking (eg. Github) to help team track milestones, task progress, and who is doing what  
 * your future self is a collaborator, as are potential reviewers, supervisors, your future PhD students, peers who'll use your software, your spin-out company, the Nobel Committee etc.  
 
 </div>  
 
 
+
 ## Authors' Conclusions  
-* authors collated their experiences and existing research in way that supports their aims  
-* useful practices for solo coders or multi-dev research software teams  
-* authors advise NOT doing all of these at once if you aren't already - add practices gradually  
-* due to overlap between practices, not too insurmountable to adopt  
-* references a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains  
-* authors end stating that "... to achieve the level of rigor that is expected throughout other parts of science, it is necessary for scientists to begin to adopt the tools and approaches that are known to improve both the quality of software and the efficiency with which it is produced." 
-* they back this up by saying that universities and funders need to support this 
+* useful for **solo coders or multi-dev RS teams**   
+* **add practices gradually**; overlap helps  
+* scientists need to start adopting tools and approaches to **improve quality & efficiency** of software  
+  - time costs offset "almost immediately" by productivity gains  
+* _universities / funders must support researchers_ to write better software   
 
 <div class="notes"> 
-...
+* references [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf): time cost to implement is offset "almost immediately" by productivity gains  
 </div>  
 
 
@@ -363,7 +378,18 @@ knitr::include_graphics("images/best-practices-timeline.png")
 # Discussion  
 
 ## My Opinions 
+* well-written, supports aims of the paper  
+* **explains SE concepts well** to non-specialists  
+* progressing order of recommendations  
+* might put off extreme novices/experts? (e.g. optimisation/profiling)  
+* Wilson et al. 2017: [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) in PLOS Computational Biology 
+
+Q: did publishing in PLOS Biology limit reach into other fields?  
+
+<div class="notes"> 
+
 * in terms of getting scientists writing better code, I'm good proof that this paper helps!  
+* collates their experiences and existing research in way that supports their aims  
 * I've found it useful for thinking about how to communicate SE concepts to non-computational folks  
 * cites some SE research, but non-SE research is from computational biology/ecology mostly - this was what was available at the time, but I wonder if releasing original paper in PLOS Biology limited reach into other fields?  
 * the order of practices is fairly reasonable (starting easy, low-hanging fruit) and get more technical towards the end, but this might put off people at extreme ends of novice/expert spectrum?     
@@ -372,7 +398,6 @@ knitr::include_graphics("images/best-practices-timeline.png")
 * 2017 paper focuses more on data and research project management practices, reduce SE techniques e.g 'symbolic debugger', 'pair programming'. Collaboration shifted forward to #3 after Software at #2.  
 * now there are research software departments in most large universities, and recognition of the 'research software engineer' role - certainly more awareness of the concepts, but is there more uptake? 
 
-<div class="notes"> 
 
 In the 2017 paper they focus more on data and research project management practices, reduce the SE techniques chat e.g 'symbolic debugger', 'pair programming'. Collaboration gets shifted forward to #2 though. 
 
@@ -441,10 +466,29 @@ Summary of practices:
 * Which practice do you think is most important? Why?  
 
 
-## Most important to you?
-```{r, echo=FALSE,out.width="44%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
-```  
+
+## Reminder of Best Practices
+
+1 - **Write programs for people, not computers**   
+
+2 - **Let the computer do the work**   
+
+3 - **Make incremental changes**   
+
+4 - **Don't repeat yourself (or others)**  
+
+
+5 - **Plan for mistakes**   
+
+6 - **Optimise software only after it works correctly**  
+
+7 - **Document design and purpose, not mechanics**  
+
+8 - **Collaborate**  
+
+<font size="4">'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)</font>
+
+
 
 
 
