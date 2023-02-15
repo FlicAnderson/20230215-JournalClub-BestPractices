@@ -70,22 +70,23 @@ Source: [tl;drLegal](https://tldrlegal.com/license/mit-license)
 __Article:__  
 - Paper format  
 - Background / research context  
-- Best Practices  
-- Conclusions
+- Best Practices   
+- Authors' conclusions
  
-__Discussion:__   
-- TODO  
+__Qs & Discussion:__   
+- My opinions about the paper 
+- Your questions about the paper  
+- Discussion - which best practice do you think is most important? 
 
 __RS: Research software__    
 __SE: Software engineering__ 
 
 
 
-# The Article 
-
-## TODO: pic of article 
-TODO ADD IMAGE of article to slide, show authors, DOI etc.  
-
+## The Article
+```{r, echo=FALSE,out.width="90%", out.height="25%",fig.align='center'}
+knitr::include_graphics("images/best-practices-article.png")
+``` 
 
 ## Paper Format  
 
@@ -122,7 +123,6 @@ TODO ADD IMAGE of article to slide, show authors, DOI etc.
   9) Use a formal release process  
   10) Perform continual process improvement  
   
-
 
 * [Kelly, Hook & Sanders 2009](https://doi.org/10.1109/MCSE.2009.139) "Five Recommended Practices for Computational Scientists Who Write Software"   
  - Separate  
@@ -316,18 +316,18 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 </div>  
 
 
-## Conclusions  
-* authors collated their experiences and existing research  
-* useful for solo coders or multi-dev research software teams  
+## Authors' Conclusions  
+* authors collated their experiences and existing research in way that supports their aims  
+* useful practices for solo coders or multi-dev research software teams  
 * authors advise NOT doing all of these at once if you aren't already - add practices gradually  
 * due to overlap between practices, not too insurmountable to adopt  
-* references a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains 
-* subsequent paper: Wilson et al. 2017: [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) in PLOS Computational Biology
+* references a [2012 Software Carpentry report](https://software-carpentry.org/files/bib/aranda-assessment-2012-07.pdf) saying the time cost to implement these is offset "almost immediately" by productivity gains  
+* authors end stating that "... to achieve the level of rigor that is expected throughout other parts of science, it is necessary for scientists to begin to adopt the tools and approaches that are known to improve both the quality of software and the efficiency with which it is produced." 
+* they back this up by saying that universities and funders need to support this 
 
 <div class="notes"> 
 ...
 </div>  
-
 
 
 
@@ -336,9 +336,6 @@ Jupyter Notebooks: originally dev'd for Julia, Python & R, but also Haskell, Rub
 ```{r, echo=FALSE,out.width="95%", out.height="17%",fig.align='center'}
 knitr::include_graphics("images/best-practices-timeline.png")
 ```  
-
-
-
 
 <div class="notes"> 
 
@@ -353,42 +350,101 @@ knitr::include_graphics("images/best-practices-timeline.png")
 * 2022: started PhD looking at practices in Research Software Engineering at EPCC with Neil Chue Hong (co-author on this paper!)  
 
 * came across this paper around 2015 and was inspired by the summary of what I could/should be doing with my research code  
-
 * started moving towards Letting the Computer Do the Work by writing scripts for data manipulation, working with biodiversity data in Research Assistant role, stopped worrying and learned to love the terminal  
-
 * even though I was working solo, I started Writing Programs for People, Not Computers. That person was me, but still...
-
 * by adopting many of these best practices and Making Incremental Changes, I got bioinformatics role on a development team (UoEdinburgh), met EPCC staff   
-
 * started Planning for Mistakes (dipping my toes into testing/debugging), did a lot of Collaboration (developing with 2x US labs and undergrad/masters students) & Documenting Design & Purpose (also helpful for onboarding students and expanding the dev team!).     
-
 * ... (still haven't quite gotten around to Optimising Software Only After It Works Correctly... (though I never write lower-level code ;D))  
 
 </div>
 
 
 
-
 # Discussion  
+
+## My Opinions 
+* in terms of getting scientists writing better code, I'm good proof that this paper helps!  
+* I've found it useful for thinking about how to communicate SE concepts to non-computational folks  
+* cites some SE research, but non-SE research is from computational biology/ecology mostly - this was what was available at the time, but I wonder if releasing original paper in PLOS Biology limited reach into other fields?  
+* the order of practices is fairly reasonable (starting easy, low-hanging fruit) and get more technical towards the end, but this might put off people at extreme ends of novice/expert spectrum?     
+* optimisation/profiling might not be applicable for a lot of researchers, and HPC users might balk at being told to use higher-level languages more  
+* subsequent paper: Wilson et al. 2017: [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510) in PLOS Computational Biology - perhaps less successful than the authors were hoping at sparking shift to these best practices.  
+* 2017 paper focuses more on data and research project management practices, reduce SE techniques e.g 'symbolic debugger', 'pair programming'. Collaboration shifted forward to #3 after Software at #2.  
+* now there are research software departments in most large universities, and recognition of the 'research software engineer' role - certainly more awareness of the concepts, but is there more uptake? 
+
+<div class="notes"> 
+
+In the 2017 paper they focus more on data and research project management practices, reduce the SE techniques chat e.g 'symbolic debugger', 'pair programming'. Collaboration gets shifted forward to #2 though. 
+
+Wilson et al. 2017: Good Enough Practices in Scientific Computing: 
+Summary of practices: 
+
+1) Data management
+  - Save the raw data.
+  - Ensure that raw data are backed up in more than one location. 
+  - Create the data you wish to see in the world. 
+  - Create analysis-friendly data.
+  - Record all the steps used to process data.
+  - Anticipate the need to use multiple tables, and use a unique identifier for every record.
+  - Submit data to a reputable DOI-issuing repository so that others can access and cite it.
+  
+2) Software
+ - Place a brief explanatory comment at the start of every program. 
+ - Decompose programs into functions. 
+ - Be ruthless about eliminating duplication.
+ - Always search for well-maintained software libraries that do what you need. 
+ - Test libraries before relying on them. 
+ - Give functions and variables meaningful names.
+ - Make dependencies and requirements explicit. 
+ - Do not comment and uncomment sections of code to control a program's behavior.
+ - Provide a simple example or test data set. 
+ - Submit code to a reputable DOI-issuing repository.
+ 
+3) Collaboration 
+ - Create an overview of your project. 
+ - Create a shared "to-do" list for the project. 
+ - Decide on communication strategies. 
+ - Make the license explicit. 
+ - Make the project citable. 
+
+4) Project organization 
+ - Put each project in its own directory, which is named after the project. 
+ - Put text documents associated with the project in the doc directory. 
+ - Put raw data and metadata in a data directory and files generated during cleanup and analysis in a results directory. 
+ - Put project source code in the src directory.
+ - Put external scripts or compiled programs in the bin directory. 
+ - Name all files to reflect their content or function. 
+
+5) Keeping track of changes
+ - Back up (almost) everything created by a human being as soon as it is created. 
+ - Keep changes small. 
+ - Share changes frequently. 
+ - Create, maintain, and use a checklist for saving and sharing changes to the project.
+ - Store each project in a folder that is mirrored off the researcher's working machine. 
+ - Add a file called CHANGELOG.txt to the project's docs subfolder. 
+ - Copy the entire project whenever a significant change has been made. 
+ - Use a version control system.
+ 
+6) Manuscripts 
+ - Write manuscripts using online tools with rich formatting, change tracking, and reference management. 
+ - Write the manuscript in a plain text format that permits version control.
+
+</div>
+
+
+
+
 
 ## Questions? 
 
 * Opinions of the paper's 'best practices'? - anything missing?  
-* Was it successful?  
-* Which is most important to you? Why?  
-* Which do you need to do more of? Why? 
+* Which practice do you think is most important? Why?  
 
 
 ## Most important to you?
 ```{r, echo=FALSE,out.width="44%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
 knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
 ```  
-
-## Need to do more of...?
-```{r, echo=FALSE,out.width="44%", out.height="20%",fig.cap="'Best Practices for Scientific Computing', [Wilson et al. 2014.](https://doi.org/10.1371/journal.pbio.1001745)",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c("images/best-practices-1-to-4.png", "images/best-practices-5-to-8.png"))
-```  
-
 
 
 
